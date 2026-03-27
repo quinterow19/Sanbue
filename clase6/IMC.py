@@ -1,14 +1,15 @@
-# hola comunidad
-peso = float(input("Introduce tu peso en kilogramos: "))
-altura = float(input("Introduce tu altura en metros: "))
+peso = float(input("Peso (kg): "))
+altura = float(input("Altura (m): "))
 
-# float: decimal
-# print(f"El peso ingresado es: {peso}")
-# print(f"El altura ingresado es: {altura}")
-
-# Cálculo del IMC
 imc = peso / (altura ** 2)
 
-# Mostrar resultado
-print(f"Tu IMC es: {round(imc, 2)}")
-#round= redondear
+print(f"\nIMC: {round(imc,2)}")
+
+if imc < 18.5:
+    print("IMC BAJO (menor al normal)")
+elif imc <= 24.9:
+    print("IMC NORMAL")
+elif imc <= 29.9:
+    print("IMC ALTO (mayor al normal)")
+else:
+    print("IMC MUY ALTO (obesidad)")
